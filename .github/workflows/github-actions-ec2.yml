@@ -1,6 +1,7 @@
+# GitHub Actions will auto-upgrade to Node.js v20 starting March 2024
+# This action (actions/checkout@v3) is already compatible with Node.js v20
 name: Push-to-EC2
 
-# Trigger deployment only on push to main branch
 on:
   push:
     branches:
@@ -12,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Use the latest version of the checkout action
       - name: Checkout the files
         uses: actions/checkout@v3
 
